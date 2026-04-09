@@ -137,3 +137,6 @@ renderCategories(categories);
  
 
 
+searchInput.addEventListener("input",function() {
+  const dataFilter = e.target.value
+})
