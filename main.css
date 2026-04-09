@@ -37,6 +37,11 @@
     background: rgb(206, 204, 204);
 }
 
+button:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
 a{
     color: white;
     padding: 10px 30px;

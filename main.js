@@ -1,6 +1,6 @@
 let container = document.getElementById("container");
 let searchInput = document.getElementById("input");
-
+ 
 let datas = [
   {
     id: 1,
@@ -101,3 +101,37 @@ function renderUser(data) {
     `).join("")
 }
 renderUser(datas)
+
+
+let categories = [
+  { name: "Musiqa", color: "#FF6B6B" },
+  { name: "Kino", color: "#4ECDC4" },
+  { name: "Multfilim", color: "#FFD93D" },
+  { name: "Drama", color: "#6A4C93" },
+  { name: "Komediya", color: "#1B9C85" },
+  { name: "Fantastika", color: "#FF9F1C" },
+  { name: "Tarixiy", color: "#2EC4B6" },
+  { name: "Triller", color: "#E71D36" },
+  { name: "Sarguzasht", color: "#FFBE0B" },
+  { name: "Romantika", color: "#FF6B6B" }
+];
+
+let categoriesContainer = document.getElementById("categories");
+
+function renderCategories(categories) {
+    categoriesContainer.innerHTML = categories.map(cat => `
+        <button style="
+            background:${cat.color};
+            border:none;
+            color:white;
+            padding:10px 15px;
+            border-radius:6px;
+            cursor:pointer;
+        ">
+            ${cat.name}
+        </button>
+    `).join("");
+}
+
+renderCategories(categories);
+ 
