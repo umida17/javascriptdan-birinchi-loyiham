@@ -4,83 +4,83 @@ let searchInput = document.getElementById("input");
 let datas = [
   {
     id: 1,
-    title: "Inception",
-    genre: "Fantastika",
-    year: 2010,
-    rating: 8.8,
-    video: "https://www.w3schools.com/html/mov_bbb.mp4"
+    title: "O'zbek Qizi (2023)",
+    genre: "Drama / Harbiy",
+    year: 2023,
+    rating: 8.5,
+    video: "https://www.youtube.com/embed/QZU7GZ4lnDk"
   },
   {
     id: 2,
-    title: "Titanic",
+    title: "Isnod (Uzbek kino)",
     genre: "Drama",
-    year: 1997,
-    rating: 7.9,
-    video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+    year: 2023,
+    rating: 7.8,
+    video: "https://www.youtube.com/embed/or6Dg3EUdRs"
   },
   {
     id: 3,
-    title: "The Dark Knight",
-    genre: "Jangari",
-    year: 2008,
-    rating: 9.0,
-    video: "https://www.w3schools.com/html/movie.mp4"
+    title: "Virus (Uzbek kino)",
+    genre: "Drama",
+    year: 2016,
+    rating: 8.0,
+    video: "https://www.youtube.com/embed/LnMI7MH8Pfg"
   },
   {
     id: 4,
-    title: "Interstellar",
-    genre: "Fantastika",
-    year: 2014,
-    rating: 8.6,
-    video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+    title: "Yuzsiz (Uzbek kino)",
+    genre: "Drama",
+    year: 2017,
+    rating: 7.4,
+    video: "https://www.youtube.com/embed/QvRudWUd15o"
   },
   {
     id: 5,
-    title: "Avengers: Endgame",
-    genre: "Jangari",
-    year: 2019,
-    rating: 8.4,
-    video: "https://www.w3schools.com/html/mov_bbb.mp4"
+    title: "Begunoh (Uzbek kino)",
+    genre: "Drama",
+    year: 2018,
+    rating: 7.2,
+    video: "https://www.youtube.com/embed/epZSw9O9-74"
   },
   {
     id: 6,
-    title: "Forrest Gump",
-    genre: "Drama",
-    year: 1994,
-    rating: 8.8,
-    video: "https://www.w3schools.com/html/movie.mp4"
+    title: "O'g'ri (Uzbek kino)",
+    genre: "Drama / Triller",
+    year: 2016,
+    rating: 7.0,
+    video: "https://www.youtube.com/embed/u-l5nf9ueGg"
   },
   {
     id: 7,
-    title: "The Matrix",
-    genre: "Fantastika",
-    year: 1999,
-    rating: 8.7,
-    video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+    title: "Kaysarginam (Uzbek kino)",
+    genre: "Drama / Komediya",
+    year: 2021,
+    rating: 7.8,
+    video: "https://www.youtube.com/embed/bZZclwJ3SwY"
   },
   {
     id: 8,
-    title: "Gladiator",
-    genre: "Tarixiy",
-    year: 2000,
-    rating: 8.5,
-    video: "https://www.w3schools.com/html/mov_bbb.mp4"
+    title: "Qaysarginam 2 (Uzbek kino)",
+    genre: "Drama / Komediya",
+    year: 2022,
+    rating: 8.1,
+    video: "https://www.youtube.com/embed/bZZclwJ3SwY"
   },
   {
     id: 9,
-    title: "Joker",
-    genre: "Drama",
+    title: "Istanbullik Milliarder (Uzbek kino)",
+    genre: "Komediya",
     year: 2019,
-    rating: 8.4,
-    video: "https://www.w3schools.com/html/movie.mp4"
+    rating: 8.3,
+    video: "https://www.youtube.com/embed/bZZclwJ3SwY"
   },
   {
     id: 10,
-    title: "Avatar",
-    genre: "Fantastika",
-    year: 2009,
-    rating: 7.8,
-    video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+    title: "Mahallada duv‑duv gap (klassik)",
+    genre: "Komediy / Klassik",
+    year: 1960,
+    rating: 9.0,
+    video: "https://www.youtube.com/embed/bZZclwJ3SwY"
   }
 ];
 
@@ -88,12 +88,16 @@ let datas = [
 function renderUser(data) {
     container.innerHTML = data.map(el => `
         <div class="card">
-            <video width="200" height="200" controls>
-                <source src="${el.video}" type="video/mp4">
-            </video>
+         <iframe width="200" height="200"
+                src="${el.video}"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
             <h1>${el.title}</h1>
             <p>${el.genre}</p>
             <a href="#">${el.year}</a>
         </div>
     `).join("")
 }
+renderUser(datas)

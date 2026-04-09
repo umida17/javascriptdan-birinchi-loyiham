@@ -29,6 +29,11 @@
     text-align: center;
     border-radius: 20px;
     color: white;
+    transition: all 0.8;
+    box-shadow: 3px 3px 3px 3px rgb(225, 224, 224);
+}
+.card:hover{
+    transform: scale(0.9);
 }
 
 a{
