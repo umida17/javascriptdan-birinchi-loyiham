@@ -135,3 +135,5 @@ function renderCategories(categories) {
 
 renderCategories(categories);
  
+
+
