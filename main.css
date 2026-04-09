@@ -11,29 +11,33 @@ body{
     flex-wrap: wrap;
 }
 
-
-
-/* CSS */
 .cinemuz-header {
-  background: linear-gradient(90deg, #FF9F1C, #FF6B6B);
-  color: white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    box-shadow: 10px 10px 10px rgb(113, 113, 112);
+    background: rgb(171, 170, 170);
+    z-index: 999999;
+    height: 140px;    
+  color: rgb(252, 252, 252);
   text-align: center;
-  padding: 25px 0;
   font-family: 'Playfair Display', serif;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+   
 }
 
 .cinemuz-header .logo {
-  font-size: 2em;
+  font-size: 42px;
+  margin-top: 35px;
   font-weight: bold;
-}
+ }
 
 .cinemuz-header .tagline {
-  font-size: 1em;
+  font-size: 20px;
   margin-top: 5px;
   font-weight: 400;
   opacity: 0.9;
-}
+ }
 
 
 #input{
@@ -61,7 +65,7 @@ body{
     transition: all 0.8;
     box-shadow: 3px 3px 3px 3px rgb(114, 114, 114);
     margin-bottom: 60px;
-}
+ }
 .card:hover{
     transform: scale(0.9);
     background: rgb(206, 204, 204);
