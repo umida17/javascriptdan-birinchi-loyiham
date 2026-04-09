@@ -137,6 +137,11 @@ renderCategories(categories);
  
 
 
-searchInput.addEventListener("input",function() {
-  const dataFilter = e.target.value
+searchInput.addEventListener("input", function(e) {
+   let malumot = e.target.value.toLowerCase();
+  const filterData = datas.filter(user => 
+    user.title.toLowerCase().includes(malumot)
+  );
+  renderUser(filterData)
 })
+renderUser(datas)
