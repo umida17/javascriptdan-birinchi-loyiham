@@ -15,6 +15,10 @@
     border-color: cadetblue;
     box-shadow: 3px 3px 3px 3px cadetblue;
     margin-bottom: 40px;
+    transition: all 0.7s ease-in-out;
+}
+#input:hover{
+    transform: scale(0.9);
 }
 .card{
     width: 300px;
