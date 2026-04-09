@@ -104,23 +104,23 @@ renderUser(datas)
 
 
 let categories = [
-  { name: "Musiqa", color: "#FF6B6B" },
-  { name: "Kino", color: "#4ECDC4" },
-  { name: "Multfilim", color: "#FFD93D" },
-  { name: "Drama", color: "#6A4C93" },
-  { name: "Komediya", color: "#1B9C85" },
-  { name: "Fantastika", color: "#FF9F1C" },
-  { name: "Tarixiy", color: "#2EC4B6" },
-  { name: "Triller", color: "#E71D36" },
-  { name: "Sarguzasht", color: "#FFBE0B" },
-  { name: "Romantika", color: "#FF6B6B" }
+  { name: "Musiqa", color: "#040404" },
+  { name: "Kino", color: "#050505" },
+  { name: "Multfilim", color: "#030303" },
+  { name: "Drama", color: "#000000" },
+  { name: "Komediya", color: "#050505" },
+  { name: "Fantastika", color: "#040404" },
+  { name: "Tarixiy", color: "#000000" },
+  { name: "Triller", color: "#060606" },
+  { name: "Sarguzasht", color: "#000000" },
+  { name: "Romantika", color: "#000000" }
 ];
 
 let categoriesContainer = document.getElementById("categories");
 
 function renderCategories(categories) {
     categoriesContainer.innerHTML = categories.map(cat => `
-        <button style="
+        <button class="button" style="
             background:${cat.color};
             border:none;
             color:white;
