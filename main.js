@@ -1,7 +1,7 @@
 let container = document.getElementById("container");
 let searchInput = document.getElementById("input");
 
- let datas =[
+ let datas=[
   {
     "id": 1,
     "title": "Inception",
@@ -76,13 +76,17 @@ let searchInput = document.getElementById("input");
 
 
 function renderUser(data) {
-    container.innerHTML = datas.map(data => `
-        <div keys = "el.id" class ="card">
-        <img src="https://via.placeholder.com/id/${data.id}/200x200?text=Endgame" alt="">
-          <h1>${data.title}</h1>
-          <p>${data.genre}</p>
-        <a href="#">${data.year}</a>
-    </div>
-        `).join("")
+    container.innerHTML = data.map(el => `
+        <div class="card">
+            <video width="200" height="200" controls>
+            <source src="video-link.mp4" type="video/mp4">
+     </video>
+            <h1>${el.title}</h1>
+            <p>${el.genre}</p>
+            <a href="#">${el.year}</a>
+        </div>
+    `).join("")
 }
-renderUser()
+
+ 
+renderUser(datas)
