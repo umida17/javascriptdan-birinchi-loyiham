@@ -1,7 +1,7 @@
-let container = document.getElementById("container")
+let container = document.getElementById("container");
+let searchInput = document.getElementById("input");
 
-
- let data =[
+ let datas =[
   {
     "id": 1,
     "title": "Inception",
@@ -73,3 +73,15 @@ let container = document.getElementById("container")
     "rating": 7.8
   }
 ]
+
+
+function renderUser(data) {
+    container.innerHTML = datas.map(data => `
+        <div>
+        <img src="https://via.placeholder.com/id/${data.id}/200x200?text=Endgame" alt="">
+          <h1>${data.title}</h1>
+          <p>${data.genre}</p>
+        <a href="#">${data.year}</a>
+    </div>
+        `).join("")
+}
