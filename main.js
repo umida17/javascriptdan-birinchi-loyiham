@@ -50,39 +50,60 @@ let datas = [
     rating: 7.0,
     video: "https://www.youtube.com/embed/u-l5nf9ueGg"
   },
+ 
+   
   {
-    id: 7,
-    title: "Kaysarginam (Uzbek kino)",
-    genre: "Drama / Komediya",
-    year: 2021,
-    rating: 7.8,
-    video: "https://www.youtube.com/embed/bZZclwJ3SwY"
-  },
-  {
-    id: 8,
-    title: "Qaysarginam 2 (Uzbek kino)",
-    genre: "Drama / Komediya",
-    year: 2022,
-    rating: 8.1,
-    video: "https://www.youtube.com/embed/bZZclwJ3SwY"
-  },
-  {
-    id: 9,
-    title: "Istanbullik Milliarder (Uzbek kino)",
-    genre: "Komediya",
-    year: 2019,
-    rating: 8.3,
-    video: "https://www.youtube.com/embed/bZZclwJ3SwY"
-  },
-  {
-    id: 10,
-    title: "Mahallada duv‑duv gap (klassik)",
-    genre: "Komediy / Klassik",
-    year: 1960,
-    rating: 9.0,
-    video: "https://www.youtube.com/embed/bZZclwJ3SwY"
-  }
+  id: 11,
+  title: "Majnun (Uzbek kino, treyler)",
+  genre: "Drama / Romantika",
+  year: 2016,
+  rating: 7.4,
+  video: "https://www.youtube.com/embed/_-Q5OByVuik" // Majnun treyler :contentReference[oaicite:0]{index=0}
+},
+{
+  id: 12,
+  title: "Darbadar (Uzbek kino, treyler)",
+  genre: "Drama / Komediya",
+  year: 2017,
+  rating: 7.1,
+  video: "https://www.youtube.com/embed/i_1RxAHo6yc" // Darbadar treyler :contentReference[oaicite:1]{index=1}
+},
+{
+  id: 13,
+  title: "Zulmat (Uzbek kino, treyler)",
+  genre: "Triller / Drama",
+  year: 2017,
+  rating: 7.8,
+  video: "https://www.youtube.com/embed/n4FwyXSulWI" // Zulmat treyler :contentReference[oaicite:2]{index=2}
+},
+{
+  id: 14,
+  title: "Hechkimga Aytma (Uzbek kino, treyler)",
+  genre: "Komediya / Drama",
+  year: 2023,
+  rating: 8.1,
+  video: "https://www.youtube.com/embed/HaiCSeBuW4g" // Hechkimga Aytma treyler :contentReference[oaicite:3]{index=3}
+},
+
+{
+  id: 15,
+  title: "Maktab hayotim (Uzbek kino)",
+  genre: "Drama / Komediya",
+  year: 2025,
+  rating: 7.0,
+  video: "https://www.youtube.com/embed/0AJb7KFSy_M"
+}, 
+{
+  id: 16,
+  title: "Ota rozi (Uzbek kino)",
+  genre: "Komediya",
+  year: 2018,
+  rating: 7.9,
+  video: "https://www.youtube.com/embed/lKOxLNGeG3Q"
+}
+
 ];
+
 
 
 function renderUser(data) {
@@ -94,8 +115,10 @@ function renderUser(data) {
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
+            
             <h1>${el.title}</h1>
             <p>${el.genre}</p>
+            
             <a href="#">${el.year}</a>
         </div>
     `).join("")
