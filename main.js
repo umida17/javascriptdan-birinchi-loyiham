@@ -77,7 +77,7 @@ let searchInput = document.getElementById("input");
 
 function renderUser(data) {
     container.innerHTML = datas.map(data => `
-        <div>
+        <div keys = "el.id" class ="card">
         <img src="https://via.placeholder.com/id/${data.id}/200x200?text=Endgame" alt="">
           <h1>${data.title}</h1>
           <p>${data.genre}</p>
@@ -85,3 +85,4 @@ function renderUser(data) {
     </div>
         `).join("")
 }
+renderUser()
