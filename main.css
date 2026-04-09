@@ -34,6 +34,7 @@
 }
 .card:hover{
     transform: scale(0.9);
+    background: rgb(206, 204, 204);
 }
 
 a{
